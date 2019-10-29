@@ -1,0 +1,75 @@
+{
+    "name": "Offer",
+    "fields": [
+        {
+            "fieldName": "caption",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "language",
+            "fieldType": "Language",
+            "fieldValues": "GERMAN,ENGLISH"
+        },
+        {
+            "fieldName": "offerDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "customAttribute",
+            "otherEntityRelationshipName": "offer",
+            "relationshipName": "customAttribute"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "template",
+            "otherEntityRelationshipName": "offer",
+            "relationshipName": "template",
+            "otherEntityField": "caption"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "company",
+            "otherEntityRelationshipName": "receivedOffers",
+            "relationshipName": "customer",
+            "otherEntityField": "name",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "person",
+            "otherEntityRelationshipName": "receivedOffers",
+            "relationshipName": "customerManager",
+            "otherEntityField": "lastname",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "company",
+            "otherEntityRelationshipName": "sentOffers",
+            "relationshipName": "vendor",
+            "otherEntityField": "name",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "person",
+            "otherEntityRelationshipName": "sentOffers",
+            "relationshipName": "vendorManager",
+            "otherEntityField": "lastname",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191029171331",
+    "entityTableName": "offer",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Offer.
+    -->
+    <changeSet id="20191029171331-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="template_id"
+                                 baseTableName="offer"
+                                 constraintName="fk_offer_template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template"/>
+
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_customer"
+                                 constraintName="fk_offer_customer_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="offer_customer"
+                                 constraintName="fk_offer_customer_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_customer_manager"
+                                 constraintName="fk_offer_customer_manager_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="customer_manager_id"
+                                 baseTableName="offer_customer_manager"
+                                 constraintName="fk_offer_customer_manager_customer_manager_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_vendor"
+                                 constraintName="fk_offer_vendor_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="vendor_id"
+                                 baseTableName="offer_vendor"
+                                 constraintName="fk_offer_vendor_vendor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_vendor_manager"
+                                 constraintName="fk_offer_vendor_manager_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="vendor_manager_id"
+                                 baseTableName="offer_vendor_manager"
+                                 constraintName="fk_offer_vendor_manager_vendor_manager_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+{
+  "varoApp": {
+    "template": {
+      "home": {
+        "title": "Templates",
+        "createLabel": "Template erstellen",
+        "createOrEditLabel": "Template erstellen oder bearbeiten",
+        "notFound": "No Templates found"
+      },
+      "created": "Template erstellt mit ID {{ param }}",
+      "updated": "Template aktualisiert mit ID {{ param }}",
+      "deleted": "Template gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Template {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Template"
+      },
+      "caption": "Caption",
+      "template": "Template"
+    }
+  }
+}

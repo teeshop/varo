@@ -1,0 +1,24 @@
+{
+  "varoApp": {
+    "customAttribute": {
+      "home": {
+        "title": "Custom Attributes",
+        "createLabel": "Custom Attribute erstellen",
+        "createOrEditLabel": "Custom Attribute erstellen oder bearbeiten",
+        "notFound": "No Custom Attributes found"
+      },
+      "created": "Custom Attribute erstellt mit ID {{ param }}",
+      "updated": "Custom Attribute aktualisiert mit ID {{ param }}",
+      "deleted": "Custom Attribute gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Custom Attribute {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Custom Attribute"
+      },
+      "key": "Key",
+      "value": "Value",
+      "offer": "Offer"
+    }
+  }
+}

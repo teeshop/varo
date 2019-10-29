@@ -1,0 +1,75 @@
+entity Company {
+	name String,
+    street String,
+    number String,
+    postalCode String,
+    city String
+}
+
+entity Person {
+	firstname String,
+    lastname String,
+    phone String,
+    email String
+}
+relationship ManyToOne {
+	Person{company(name)} to Company
+}
+
+entity Document {
+    createdAt Instant,
+    content Blob
+}
+relationship ManyToOne {
+	Document{offer(offerDate)} to Offer
+	Document{createdBy(login)} to User
+}
+
+entity Offer {
+	caption String,
+	language Language,
+	offerDate Instant
+}
+
+relationship ManyToMany {
+	Offer{customer(name)} to Company{receivedOffers}
+	Offer{customerManager(lastname)} to Person{receivedOffers}
+	Offer{vendor(name)} to Company{sentOffers}
+	Offer{vendorManager(lastname)} to Person{sentOffers}
+}
+
+relationship ManyToOne {
+	Offer{template(caption)} to Template
+}
+
+entity CustomAttribute {
+	key String,
+    value String
+}
+
+relationship OneToMany {
+	Offer to CustomAttribute
+}
+
+entity Template {
+	caption String,
+	template Blob
+}
+
+enum Language {
+    GERMAN, ENGLISH
+}
+
+// Set pagination options
+paginate Company with infinite-scroll
+paginate Template with infinite-scroll
+paginate Offer with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+//dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
