@@ -1,0 +1,28 @@
+{
+  "varoApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "createLabel": "Person erstellen",
+        "createOrEditLabel": "Person erstellen oder bearbeiten",
+        "notFound": "No People found"
+      },
+      "created": "Person erstellt mit ID {{ param }}",
+      "updated": "Person aktualisiert mit ID {{ param }}",
+      "deleted": "Person gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Person {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "phone": "Phone",
+      "email": "Email",
+      "company": "Company",
+      "receivedOffers": "Received Offers",
+      "sentOffers": "Sent Offers"
+    }
+  }
+}

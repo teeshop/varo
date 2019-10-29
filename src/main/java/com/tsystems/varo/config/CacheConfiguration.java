@@ -42,6 +42,21 @@ public class CacheConfiguration {
             createCache(cm, com.tsystems.varo.domain.User.class.getName());
             createCache(cm, com.tsystems.varo.domain.Authority.class.getName());
             createCache(cm, com.tsystems.varo.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.tsystems.varo.domain.Company.class.getName());
+            createCache(cm, com.tsystems.varo.domain.Company.class.getName() + ".receivedOffers");
+            createCache(cm, com.tsystems.varo.domain.Company.class.getName() + ".sentOffers");
+            createCache(cm, com.tsystems.varo.domain.Person.class.getName());
+            createCache(cm, com.tsystems.varo.domain.Person.class.getName() + ".receivedOffers");
+            createCache(cm, com.tsystems.varo.domain.Person.class.getName() + ".sentOffers");
+            createCache(cm, com.tsystems.varo.domain.Document.class.getName());
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName());
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName() + ".customAttributes");
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName() + ".customers");
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName() + ".customerManagers");
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName() + ".vendors");
+            createCache(cm, com.tsystems.varo.domain.Offer.class.getName() + ".vendorManagers");
+            createCache(cm, com.tsystems.varo.domain.CustomAttribute.class.getName());
+            createCache(cm, com.tsystems.varo.domain.Template.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

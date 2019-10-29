@@ -1,0 +1,30 @@
+{
+  "varoApp": {
+    "offer": {
+      "home": {
+        "title": "Offers",
+        "createLabel": "Offer erstellen",
+        "createOrEditLabel": "Offer erstellen oder bearbeiten",
+        "notFound": "No Offers found"
+      },
+      "created": "Offer erstellt mit ID {{ param }}",
+      "updated": "Offer aktualisiert mit ID {{ param }}",
+      "deleted": "Offer gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Offer {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Offer"
+      },
+      "caption": "Caption",
+      "language": "Language",
+      "offerDate": "Offer Date",
+      "customAttribute": "Custom Attribute",
+      "template": "Template",
+      "customer": "Customer",
+      "customerManager": "Customer Manager",
+      "vendor": "Vendor",
+      "vendorManager": "Vendor Manager"
+    }
+  }
+}

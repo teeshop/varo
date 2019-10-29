@@ -1,0 +1,32 @@
+{
+    "name": "CustomAttribute",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "customAttribute",
+            "relationshipName": "offer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191029171332",
+    "entityTableName": "custom_attribute",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
